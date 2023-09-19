@@ -1,40 +1,20 @@
-// String :- 
 
-let singleQuotes = 'single quotes ki string';
-let doubleQuotes = "Double quotes ki string";
+        // String and its Methods
 
-console.log(singleQuotes);
-console.log(doubleQuotes);
+        var string = "This";
+        var name = "Prince";
+        var channel = "codewithprince";
+        var message = 'Prince is a good boy';
+        var temp = `${name} is a 'nice' person "and" \n he has a channel called ${channel}`;  // \n is use to change line just like c language
+        console.log(string)
 
-let char = singleQuotes.charAt(4);
-let asciiCode = singleQuotes.charCodeAt(4);
-let substr = singleQuotes.substring(2, 8);
-console.log(char);
-console.log(asciiCode);
-console.log(substr);
+        console.log(temp)
 
-// Function in String :-
-// 1.Split  and  2.Joint
-// Split :- we can change string into array by the help of any character present in String.
+        var len = name.length;  // string length: 
+        console.log("length of name is " + len);
+        console.log(`length of name is ${len}`);
 
-let arrStr = singleQuotes.split("i");
-console.log(arrStr);
 
-let arrStr1 = singleQuotes.split(" ");
-console.log(arrStr1);
-
-let arrStr2 = singleQuotes.split("");    // if we don't provide any character or space then it will convert whole string character-wise array.
-console.log(arrStr2);
-
-// Joint :- Help in join the string on the basis of what we splited previously.
-
-let arrStr3 = singleQuotes.split("i");    // if we don't provide any character or space then it will convert whole string character-wise array.
-console.log(arrStr3);
-let string = arrStr3.join("+");
-console.log(string);
-
-// trim  :- it remove white spaces from beginning and end of string.
-
-let spacedQutoes = "   Spaced qutoes is here   ";
-let string2 = spacedQutoes.trim();
-console.log(string2);
+        // why to use string in js: 
+        var y = new String("this");
+      
