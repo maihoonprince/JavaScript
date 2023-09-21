@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <nav class="block">
+        <p class="paragraph">Welcome to my website</p>
+    </nav>
+
+    <div class="block">
+        <h4>Hey There.My Name is <span id="username">Prince</span></h4>
+        <p class="paragraph">Here is code for you</p>
+        <pre><code>console.log('Hey There')</code></pre>
+    </div>
+
+    <div>
+        <div class="block">
+            <h3>This is div 2.</h3>
+        </div>
+    </div>
+
+    <script>
+        // Query Selector:-
+        // Query Selector always select first element but Query SelectorAll selects every element of same names.
+        /*
+        /*
+        we can select the Selectors by their:-
+        - tag name
+        - id #
+        - class
+        */
+
+        const body = document.querySelector("body");
+        console.log(body);
+
+        body.innerHTML = "<h1> Hacked!!!</h1>"
+
+        console.log(body.innerHTML);
+
+        const abcd = document.querySelector("div");
+        console.log(abcd);
+        abcd.innerHTML = "<h1> Hacked!!!</h1>"
+
+
+        // Homework :-
+
+        const wxyz = document.querySelector("code");
+        console.log(wxyz);
+        wxyz.innerText = "Alert!" 
+
+        // How to use query selector by their id name:-
+
+       const efgh = document.querySelector("#username");
+        console.log(efgh);
+        efgh.innerText = "Piyush Garg" 
+
+        // How to use query selector by their Class  name:-
+
+         const stu = document.querySelector(".block");
+        // stu.innerText = " alert";
+        stu.innerHTML = "<p> Piyush Garg </p>"; 
+
+       const ele = document.querySelector("div");
+        console.log(ele.children); // we can access even their children 
+
+        const ele2 = document.querySelectorAll(".block");
+        ele.forEach((e) => {
+            console.log(e.innerHTML);
+        });
+    </script>
+</body>
+</html>
