@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Class</title>
+</head>
+<body>
+    <nav class="blk">
+        <p class="paragraph">Welcome to my website</p>
+    </nav>
+
+    <div class="blk">
+        <h4>Hey There. My Name is <span class="red-color" id="username">Prince</span></h4>
+        <p class="paragraph">Here is code for you</p>
+        <pre><code>console.log('Hey There')</code></pre>
+    </div>
+
+    <div id="my-container"></div>
+
+    <button id="clickButton">Click Me</button>
+
+    <script>
+        // How to create elements dynamically in JavaScript:
+
+        const button = document.getElementById('clickButton');
+        const container = document.getElementById('my-container');
+
+        let count = 1;
+        button.addEventListener('click', () => {
+            const el = document.createElement('h1');
+            el.innerText = 'I am Prince'; // Use innerHTML to set HTML content
+           container.appendChild(el); // Append the created element to the container
+
+          const el = document.createElement('li');
+          el.innerText = count;
+          container.appendChild(el);
+          count++;
+        });
+    </script>
+</body>
+</html>
