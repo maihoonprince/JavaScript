@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Class</title>
+</head>
+<body>
+    <nav class="blk">
+        <p class="paragraph">Welcome to my website</p>
+    </nav>
+
+    <div class="blk">
+        <h4>Hey There.My Name is <span class="red-color" id="username">Prince</span></h4>
+        <p class="paragraph">Here is code for you</p>
+        <pre><code>console.log('Hey There')</code></pre>
+    </div>
+
+    <div>
+        <div class="blk">
+            <h3>This is div 2.</h3>
+        </div>
+    </div>
+
+
+    <script>
+        const ele = document.getElementsByClassName("blk");
+        for(let i = 0; i<ele.length; i++){
+            elements[i].classList.remove("blk");
+        }
+
+         console.log(elements);
+
+         for(let i=0; i<elements.length; i++){
+             elements.item(i).style.background = "blue";
+         }
+ 
+    </script>
+
+</body>
+</html>
