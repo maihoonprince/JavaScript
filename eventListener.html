@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Class</title>
+</head>
+<body>
+    <nav class="blk">
+        <p class="paragraph">Welcome to my website</p>
+    </nav>
+
+    <div class="blk">
+        <h4 id="name-block">Hey There.My Name is <span class="red-color" id="username">Prince</span></h4>
+        <p class="paragraph">Here is code for you</p>
+        <pre><code>console.log('Hey There')</code></pre>
+    </div>
+
+    <div>
+        <div class="blk">
+            <h3>This is div 2.</h3>
+        </div>
+    </div>
+
+    <button id="clickButton">Click</button>
+    <button onclick="alert('Hey')" id="clickButton">Click</button>    // this is also way of adding event listener without using script....
+
+    <script src="eventListener.js">
+
+       //  const el = document.getElementById("clickButton");
+       
+        el.onclick = function(){
+            console.log("Hey, i am clicked");
+        }; 
+
+        // Most perfect way of passing eventListener is :-
+        // By creating call back function and recalling it anytime.
+
+         function doSomthing(){
+            console.log("Hey, i am clicked");
+        }
+
+        el.addEventListener("clicked", doSomthing); 
+
+        // Assignment :-
+
+        // Change color of h4 into red by clicking on click button :-
+         const el = document.getElementById("clickButton");
+        const nameBlock = document.getElementById("name-block");
+
+        el.addEventListener("click", () =>{
+            if (nameBlock.style.color === "red"){
+                nameBlock.style.color = "blue";
+            }
+            else{
+                nameBlock.style.color = "red";
+            }
+        }); 
+
+
+        // Remove the element after clicking on it :-
+        const allChildren = document.querySelector("body").allChildren
+
+        for(let i=0; i<allChildren.length; i++){
+            allChildren.item(i).addEventListener("click", () => {
+                allChildren.item(i).remove();
+            });
+        }
+
+ 
+    </script>
+     <!-- <script>
+         el.addEventListener("clicked", () => console.log("hacked!!"));
+     </script> -->
+</body>
+</html>
