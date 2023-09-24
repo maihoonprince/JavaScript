@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Class</title>
+</head>
+<body>
+    <nav class="blk">
+        <p class="paragraph">Welcome to my website</p>
+    </nav>
+
+    <div class="blk">
+        <h4>Hey There.My Name is <span class="red-color" id="username">Prince</span></h4>
+        <p class="paragraph">Here is code for you</p>
+        <pre><code>console.log('Hey There')</code></pre>
+    </div>
+
+    <div>
+        <div class="blk">
+            <h3>This is div 2.</h3>
+        </div>
+
+        <input id="input-username" type="text" placeholder="Enter Your Name">
+        <button id="clickButton">Click Me</button>
+    </div>
+
+
+    <script>
+        // local Storage in Java Script :-
+        /*
+        localStorage is a web storage technology in JavaScript that allows web applications to store data in a key-value pair format within a user's web browser.
+        
+        No other person or web can access other's local storage due to privacy purpose.
+        */
+
+        const button = document.getElementById("clickButton");
+        const uname = document.getElementById("input-username");
+        const username = document.getElementById("username");
+
+        button.addEventListener("click", () => {
+           const value = uname.value;
+           localStorage.setItem("name", value);
+           location.reload(); 
+        });
+
+        window.addEventListener("load", () => {
+            const value = localStorage.getItem('name');
+            username.innerText = value;
+        });
+
+    </script>
+
+</body>
+</html>
