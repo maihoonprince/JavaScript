@@ -1,0 +1,1 @@
+console.log("hey, i am text script");
